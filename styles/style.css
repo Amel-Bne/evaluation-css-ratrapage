@@ -16,7 +16,7 @@ img {
   display: block;
   max-width:100%;
 }
-
+/* ****************************************************************** */
 .nav-pc{
   display: none;
 }
@@ -56,7 +56,7 @@ z-index: 1;
   margin: auto;
 }
 
-
+/* ****************************************************************** */
 .shop{
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -76,6 +76,14 @@ z-index: 1;
   position: relative;
 }
 
+.card h1{
+  position: absolute;
+  color: white;
+  text-transform: uppercase;
+  font-family: 'oswald';
+  font-size: 20px;
+}
+
 .card-large{
   position: relative;
   display: flex;
@@ -89,14 +97,14 @@ z-index: 1;
   height: 100%;
 }
 
-h1{
-  position: absolute;
+.card-large h1{
+    position: absolute;
   color: white;
   text-transform: uppercase;
   font-family: 'oswald';
   font-size: 20px;
 }
-
+/* ****************************************************************** */
 .printemps{
   position: relative;
   text-transform: uppercase;
@@ -147,7 +155,7 @@ h1{
   height: 100vh;
   position: absolute;
 }
-
+/* ****************************************************************** */
 footer{
   background-image: url(../img/bg_pattern.png);
   padding: 2rem;
@@ -157,7 +165,7 @@ footer{
   font-family: 'baskervville';
 }
 
-
+/* ****************************************************************** */
 .form{
   display: flex;
 }
@@ -175,7 +183,7 @@ button{
   color: white;
   font-size: 20px;
 }
-
+/* ****************************************************************** */
 .question{
   display: flex;
   flex-direction: column;
@@ -186,7 +194,7 @@ button{
   color: black;
   font-size: 14px;
 }
-
+/* ****************************************************************** */
 .rencontre{
   display: flex;
   flex-direction: column;
@@ -197,7 +205,7 @@ button{
   color: black;
   font-size: 14px;
 }
-
+/* ****************************************************************** */
 .propos{
   display: flex;
   flex-direction: column;
@@ -209,10 +217,13 @@ button{
   font-size: 14px;
 }
 
+/* ****************************************************************** */
 .icones i{
   margin: 15px 4px;
   font-size: 17px;
 }
+
+/* je cible chaque enfant */
 
 .icones i:hover:nth-child(1){
   color: rgb(90, 32, 99);
@@ -238,6 +249,75 @@ button{
   color: rgb(179, 18, 18);
 }
 
+
+
+
+
+
+
+/* PAGE TOP30 */
+body{
+    background-image:url(../img/bg_pattern.png);
+}
+/* ****************************************************************** */
+.titre{
+  font-family: 'oswald';
+  text-align: center;
+  font-size: 60px;
+}
+/* ****************************************************************** */
+.shop30{
+  font-family:'oswald';
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+.card30{
+    grid-column: span 6;
+}
+
+.card30 img{
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+}
+
+.card30 h1 {
+  text-align: center;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.card30-large{
+    grid-column: span 6;
+}
+
+.card30-large img{
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+}
+
+.card30-large h1{
+  text-align: center;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+/* ****************************************************************** */
+.espace{
+  height: 5rem;
+  background-image:url(../img/bg_pattern.png);
+}
+
+.nav-pc30{
+  display: none;
+}
+
+/* ****************************************************************** */
+/* responsive ecran moyen */
 @media screen and (min-width: 770px){
 
     .card{
@@ -247,8 +327,25 @@ button{
     .card-large{
       grid-column: span 4;
     }
+
+    /* responsive page top 30 */
+
+    .shop30{
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+    }
+
+    .card30-large{
+      grid-column: span 6;
+    }
+
+    .card30{
+      grid-column: span 3;
+    }
   
 }
+/* ****************************************************************** */
+/* responsive grand ecran */
 
 @media screen and (min-width: 1024px){
 
@@ -285,5 +382,35 @@ body{
   text-transform: uppercase;
   font-family: 'oswald';
   text-decoration: none;
+}
+
+/* ****************************************************************** */
+/* responsive grand écran */
+
+.svg-pc30{
+width: 8rem;
+margin-right: 11rem;
+}
+
+.nav-pc30{
+  display: flex;
+  height: 68px;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-pc30 a{
+text-decoration: none;
+color: black;
+font-family: 'oswald';
+text-transform: uppercase;
+}
+
+.shop30{
+  padding-left: 8rem;
+  padding-right: 8rem;
+  background-image: url(../img/bg_pattern.png);
+  gap: 1rem;
 }
 }
