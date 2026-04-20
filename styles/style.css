@@ -3,9 +3,287 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  padding-top: 68px;
 }
 /* Fait tenir les images dans leur parent et enlève l'espacement en bottom */
 img {
   display: block;
   max-width:100%;
+}
+
+.nav-pc{
+  display: none;
+}
+
+.nav-mobile{
+height: 68px;
+width: 100%;
+position: fixed;
+display: flex;
+justify-content: center;
+background-image: url(../img/bg_pattern.png);
+top: 0;
+z-index: 1;
+}
+
+.burger{
+  position: absolute;
+  left: 0;
+  padding-top: 15px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+
+.burger div{
+  background-color: black;
+  width: 25px;
+  height: 2px;
+}
+
+.svg-mobile{
+  width: 125px;
+  margin: auto;
+}
+
+
+.shop{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.card{
+  grid-column: span 6;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card img{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.card-large{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: span 12;
+}
+
+.card-large img{
+  width: 100%;
+  height: 100%;
+}
+
+h1{
+  position: absolute;
+  color: white;
+  text-transform: uppercase;
+  font-family: 'oswald';
+  font-size: 20px;
+}
+
+.printemps{
+  position: relative;
+  text-transform: uppercase;
+  font-family: 'oswald';
+}
+
+.printemps img{
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.printemps h2{
+  font-size: 40px;
+}
+
+.texte-printemps{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  inset: 0;
+}
+
+.btn{
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+}
+
+.btn h3{
+  padding: 25px;
+  border: 2px solid white;
+}
+
+.btn h3:hover{
+  background-color: #ffffff3d;
+  padding: 25px 30px;
+  transition: 0.2s;
+}
+
+.printemps::before{
+  content:"";
+  background-color: rgba(0, 0, 0, 0.411);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+
+footer{
+  background-image: url(../img/bg_pattern.png);
+  padding: 2rem;
+  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  font-family: 'baskervville';
+}
+
+
+.form{
+  display: flex;
+}
+
+input{
+  padding: 20px;
+  background-image: url(../img/bg_pattern.png);
+  border: 1px solid grey;
+}
+
+button{
+  padding: 20px;
+  background-color: black;
+  border: 1px solid black;
+  color: white;
+  font-size: 20px;
+}
+
+.question{
+  display: flex;
+  flex-direction: column;
+}
+
+.question  a{
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+
+.rencontre{
+  display: flex;
+  flex-direction: column;
+}
+
+.rencontre a{
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+
+.propos{
+  display: flex;
+  flex-direction: column;
+}
+
+.propos  a{
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+
+.icones i{
+  margin: 15px 4px;
+  font-size: 17px;
+}
+
+.icones i:hover:nth-child(1){
+  color: rgb(90, 32, 99);
+}
+
+.icones i:hover:nth-child(2){
+  color: rgb(30, 122, 150);
+}
+
+.icones i:hover:nth-child(3){
+  color: rgb(50, 24, 145);
+}
+
+.icones i:hover:nth-child(4){
+  color: rgb(161, 7, 7);
+}
+
+.icones i:hover:nth-child(5){
+  color: rgb(48, 70, 8);
+}
+
+.icones i:hover:nth-child(6){
+  color: rgb(179, 18, 18);
+}
+
+@media screen and (min-width: 770px){
+
+    .card{
+      grid-column: span 3;
+    } 
+
+    .card-large{
+      grid-column: span 4;
+    }
+  
+}
+
+@media screen and (min-width: 1024px){
+
+.nav-mobile{
+  display: none;
+}
+
+body{
+  padding: 0;
+}
+
+
+.svg-pc  {
+  fill: white;
+  width: 8rem;
+  margin-right: 11rem;
+}
+
+.nav-pc{
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 68px;
+  z-index: 1;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-pc a{
+  color: white;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-family: 'oswald';
+  text-decoration: none;
+}
 }
